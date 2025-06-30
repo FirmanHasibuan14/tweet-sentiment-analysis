@@ -9,7 +9,7 @@ import pickle
 import pandas as pd
 
 class SentimentAnalysisService:
-    def __init__(self, model_path='/ML/Model/sentiment_model.h5', data_path='/ML/Data/sentiment_tweets3.csv'):
+    def __init__(self, model_path='../ML/Model/sentiment_model.h5', data_path='../ML/Data/sentiment_tweets3.csv'):
         self.model = tf.keras.models.load_model(model_path)
         
         self._download_nltk_data()
