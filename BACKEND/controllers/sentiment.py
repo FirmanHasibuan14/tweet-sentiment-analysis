@@ -4,7 +4,7 @@ from models.tweet import Tweet
 from services.ml_service import SentimentAnalysisService
 
 def analyze_and_save_sentiment(tweet_data: TweetCreate, db: Session, ml_service: SentimentAnalysisService):
-    prediction_result = SentimentAnalysisService.predict(tweet_data.text)
+    prediction_result = ml_service.predict(tweet_data.text)
     db_tweet = Tweet(
         text=tweet_data.text,
         sentiment_score=prediction_result["sentiment_score"],
