@@ -8,5 +8,3 @@ class Tweet(Base):
     text = Column(String, index=True)
     sentiment_score = Column(Float)
     is_depression = Column(Boolean)
-
-    
